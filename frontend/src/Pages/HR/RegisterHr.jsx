@@ -1,7 +1,7 @@
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import React, { useState } from 'react'
-
-const Video = () => {
+import Page from '../Page';
+const RegisterHr = () => {
   const [videoSrc, setVideo] = useState(null);
 
   const handleVidChange = (e) => {
@@ -16,7 +16,8 @@ const Video = () => {
 	};
 
   return (
-    <div className='bg-white'>
+    <Page >
+       <div className='bg-white p-10'>
     <form>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
@@ -229,7 +230,8 @@ const Video = () => {
       </div>
     </form>
     </div>
+    </Page>
   )
 }
 
-export default Video
+export default RegisterHr
