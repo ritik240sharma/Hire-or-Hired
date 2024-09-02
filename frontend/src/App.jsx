@@ -1,13 +1,13 @@
 import './App.css'
-import Video from './Pages/Video'
+import Footer from './Pages/sidebar/Footer'
+import NavBar from "./Pages/sidebar/NavBar"
+import Path from './Path';
 
 function App() {
 
   return (
-    <>
-      <Video /> 
-    </>
-  )
+    <Path/>
+  );
 }
 
 export default App
