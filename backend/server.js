@@ -4,6 +4,7 @@ import connectMongoDB from './db/connectMongoDB.js';
 import {v2 as cloudinary} from "cloudinary";
 import { updateUser } from './controllers/user_controller.js';
 import fileUpload from 'express-fileupload';
+import multer from 'multer';
 
 const app = express();
 dotenv.config();
@@ -13,6 +14,8 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 })
 
+const upload = multer({ dest: 'uploads/' }); 
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(fileUpload({
@@ -20,7 +23,7 @@ app.use(fileUpload({
 }));
 
 // const router = express.Router();
-app.post("/api/users/update", updateUser);
+app.post("api/hr/upload-video",  upload.single('userVideo'),updateUser);
 // app.use(router.get("/profile/:username",protectRoute, getUserProfile);
 
 app.listen(4000,() => {

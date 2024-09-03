@@ -5,7 +5,7 @@ function HrList() {
   return (
     <Page>
       <h1>
-        Hr
+        Hr List
       </h1>
     </Page>
   )
