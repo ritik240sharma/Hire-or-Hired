@@ -1,5 +1,6 @@
 import React from 'react'
 import Page from './Page'
+import HrInfo from './HR/HrInfo'
 
 function Home() {
   return (

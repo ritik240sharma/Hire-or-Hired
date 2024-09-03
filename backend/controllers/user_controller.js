@@ -26,10 +26,6 @@ export const updateUser = async (req,res) => {
             user.fullname = fullname;
         }
         
-        // console.log(userVideo);
-        //     const uploadedResponse = await cloudinary.uploader.upload(userVideo);
-        //     userVideo = uploadedResponse.secure_url;
-        //     user.userVideo = userVideo;
         if (userVideo) {
             // Upload video to Cloudinary
             const uploadResponse = await cloudinary.uploader.upload(userVideo.tempFilePath, {
